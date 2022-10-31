@@ -1,19 +1,19 @@
 [
   {
     "title": "Zona de Descargas",
-    "image": "src/data/showcase/images/gestorhotelero.png",
+    "image": "src/data/showcase/images/zonadescargas.png",
     "technologies": "Vue.js, Typescript, Bootstrap",
     "url": "http://zonadescargas.municarrillo.go.cr/"
   },
   {
     "title": "API Municipal",
-    "image": "src/data/showcase/images/gestorhotelero.png",
+    "image": "src/data/showcase/images/apimunicipal.png",
     "technologies": "PHP, Laravel",
-    "url": "http://zonadescargas.municarrillo.go.cr/"
+    "url": "https://documenter.getpostman.com/view/23461662/2s847HNXb2"
   },
   {
     "title": "Chat-bot",
-    "image": "src/data/showcase/images/gestorhotelero.png",
+    "image": "src/data/showcase/images/chat-bot.png",
     "technologies": "Dialogflow",
     "url": "https://www.municarrillo.go.cr/"
   },
