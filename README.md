@@ -1,8 +1,6 @@
-# Astro Landing Page
+# Make with Astro Landing Page
 
 An Astro + Tailwind CSS starter kit for landing pages.
-
-![Screenshots of Astro Landing Page](screenshots.jpg)
 
 ## Features
 
