@@ -1,0 +1,27 @@
+---
+import ContentSection from "~/components/content-section.astro";
+
+const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
+	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+);
+
+---
+
+<ContentSection title="ARTICLES" id="articles">
+    <section class="articles">
+        <ul class="articles__post">
+            {posts.map((post) => (
+                <li>
+                    <time datetime={post.frontmatter.pubDate} class="mr-12">
+                        {new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+                            year: 'numeric',
+                            month: 'short',
+                            day: 'numeric',
+                        })}
+                    </time>
+                    <a href={post.url}>{post.frontmatter.title}</a>
+                </li>
+            ))}
+        </ul>
+    </section>
+</ContentSection>

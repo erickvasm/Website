@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Zona de Descargas",
+    "image": "src/data/showcase/images/gestorhotelero.png",
+    "technologies": "Vue.js, Typescript, Bootstrap",
+    "url": "http://zonadescargas.municarrillo.go.cr/"
+  },
+  {
+    "title": "API Municipal",
+    "image": "src/data/showcase/images/gestorhotelero.png",
+    "technologies": "PHP, Laravel",
+    "url": "http://zonadescargas.municarrillo.go.cr/"
+  },
+  {
+    "title": "Chat-bot",
+    "image": "src/data/showcase/images/gestorhotelero.png",
+    "technologies": "Dialogflow",
+    "url": "https://www.municarrillo.go.cr/"
+  },
+  {
+    "title": "Naviera Pep",
+    "image": "src/data/showcase/images/navierapep.png",
+    "technologies": "PHP & Laravel",
+    "url": "https://github.com/erickvasm/Naviera-PeP"
+  },
+  {
+    "title": "Hestor Hotelero",
+    "image": "src/data/showcase/images/gestorhotelero.png",
+    "technologies": "C# & .NET",
+    "url": "https://git.ucr.ac.cr/CRIS.TAISIGUE/gestorhotelero"
+  }
+]

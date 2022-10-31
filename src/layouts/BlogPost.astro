@@ -1,0 +1,57 @@
+---
+import Head from "~/components/head.astro"
+import Buttom from "~/components/buttom.astro";
+import ContentSection from "~/components/content-section.astro";
+import "~/styles/index.css";
+
+export interface Props {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
+}
+
+const {
+  content: { title, pubDate, updatedDate, heroImage },
+} = Astro.props;
+---
+
+<html lang="en">
+  <Head title="Blog Erick Vasquez" description=""/>
+ 
+  <body
+    class="bg-black h-full overflow-x-hidden text-base selection:bg-secondary m-12"
+  >
+    <main class="mt-5 main__blospost">
+      <ContentSection title={title} id="articles">
+        <article>
+          <div class="mb-12">
+            {
+              heroImage && (
+                <img width={1400} height={360} src={heroImage} alt="" />
+              )
+            }
+          </div>
+
+          {pubDate && <time>{pubDate}</time>}
+          {
+            updatedDate && (
+              <div>
+                Last updated on <time>{updatedDate}</time>
+              </div>
+            )
+          }
+          <br />
+          <br />
+          <hr />
+          <slot />
+        </article>
+
+        <Buttom ref="/blog" title="Atras" icon="keyboard-backspace" />
+      </ContentSection>
+    </main>
+  </body>
+</html>

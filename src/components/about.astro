@@ -1,0 +1,25 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+---
+
+<ContentSection title="ABOUT" id="about">
+  <Fragment slot="lead">
+    <span class="text-primary">I'm Erick Vasquez, a computer scientist</span>
+    <br>
+    <br>     
+    I have developed a degree of compromise and responsibility in
+    high-pressure situations, which I have been able to treat in an
+    organized way through development methodologies.
+  </Fragment>
+  <div class="grid grid-cols-1  ">
+    <a
+      href="https://docdro.id/d1C8f71"
+      class="flex items-center justify-center gap-3 px-6 py-4 border-2 border-current"
+      target="_blank"
+    >
+      <Icon pack="mdi" name="file" class="h-8" />
+      <span>Downloand CV</span>
+    </a>
+  </div>
+</ContentSection>

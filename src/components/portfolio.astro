@@ -1,0 +1,21 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import PortfolioCard from "~/components/portfolio-card.astro";
+import portfolio from "~/data/showcase/portfolio.json";
+---
+
+<ContentSection title="PORTFOLIO" id="portfolio">
+  <Fragment slot="lead">
+    These are some of my <span class="text-primary">projects</span>.{" "}
+    
+  </Fragment>
+  <div class="max-w-6xl space-y-2 portfolio__main">
+    <div class="gap-4  portfolio__main--container">
+      {
+        portfolio.map(({ title, image, technologies, url }) => (
+          <PortfolioCard title={title} image={image} technologies={technologies} url={url}/>
+        ))
+      }
+    </div>
+  </div>
+</ContentSection>

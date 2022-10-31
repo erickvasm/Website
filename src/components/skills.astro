@@ -1,0 +1,122 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import SkillsList from "~/components/skills-list.astro";
+
+const frameworks = [
+  {
+    title: "Laravel",
+    icon: "fa-brands:laravel",
+    url: "https://laravel.com/",
+  },
+  {
+    title: ".Net Core",
+    icon: "frameworks/netcore",
+    url: "https://dotnet.microsoft.com/en-us/download",
+  },
+  {
+    title: "Vue.js 3",
+    icon: "frameworks/vue",
+    url: "https://vuejs.org/",
+  },
+  {
+    title: "Astro",
+    icon: "frameworks/astro",
+    url: "https://astro.build/",
+  },
+  {
+    title: "Tailwind CSS",
+    icon: "frameworks/tailwind",
+    url: "https://tailwindcss.com/",
+  }, 
+  {
+    title: "Bootstrap",
+    icon: "fa-brands:bootstrap",
+    url: "https://getbootstrap.com/",
+  }
+];
+
+const others = [
+  {
+    title: "Linux",
+    icon: "fa-brands:linux",
+    url: "https://ubuntu.com/",
+  },
+  {
+    title: "Git",
+    icon: "fa-brands:git",
+    url: "https://git-scm.com/",
+  },
+  {
+    title: "Docker",
+    icon: "fa-brands:docker",
+    url: "https://www.docker.com/ ",
+  }
+];
+
+const technologies = [
+  {
+    title: "HTML",
+    icon: "fa-brands:html5",
+    url: "https://html.com/html5/",
+  },
+  {
+    title: "CSS",
+    icon: "fa-brands:css3",
+    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    title: "PHP",
+    icon: "fa-brands:php",
+    url: "https://www.php.net/",
+  },
+  {
+    title: "C#",
+    icon: "frameworks/csharp",
+    url: "https://learn.microsoft.com/en-us/dotnet/csharp/",
+  },
+  {
+    title: "JavaScript",
+    icon: "fa-brands:js",
+    url: "hhttps://www.javascript.com/",
+  },
+  {
+    title: "TypeScript",  
+    icon: "frameworks/typescript",
+    url: "https://www.typescriptlang.org/",
+  },
+  {
+    title: "Java",
+    icon: "fa-brands:java",
+    url: "https://www.java.com/"
+  },
+  {
+    title: "Python",
+    icon: "fa-brands:python",
+    url: "https://www.python.org/",
+  },
+  {
+    title: "SQL",
+    icon: "frameworks/sql",
+    url: "https://www.postgresql.org/",
+  },
+];
+---
+
+<ContentSection title="SKILLS" id="skills">
+ <Fragment slot="lead">
+    There is my <span class="text-primary">mains</span> skills.
+  </Fragment>
+  <SkillsList
+    title="Technologies"
+    data={technologies}
+  />
+
+  <SkillsList
+    title="Frameworks"
+    data={frameworks}
+  />
+  <SkillsList
+    title="Others"
+    data={others}
+  />
+</ContentSection>
