@@ -2,16 +2,126 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Ubuntu Setup"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Oct 22 2022"
-heroImage: "https://i.ibb.co/4g04KTM/proyec1.png"
+pubDate: "6/11/22"
+heroImage: "https://i.ibb.co/LzXW7Q4/Ubuntu-Nord.png"
 ---
+<br>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+Ubuntu es una de las mejores distribuciones de Linux para iniciarse en el mundo del desarrollo, gracias qué es una de las más utilizadas, por lo que cuenta con una amplia comunidad en foros, lo cual ayuda en momentos en los que hay inconvenientes. Si embargo, por si solo, Ubuntu no cuenta con una personalización variada. Es por ello, que este post, veremos como personalizar nuestro Ubuntu. En mi caso, esta personalización, se hizo en **Ubuntu 22.04 LTS**.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+<br>
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+Primeramente, necesitamos descargas los siguientes programas para poder realizar nuestra personalización.  
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+<br>
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+## <span style="color:#3E6D9C;">**1. Manage extension** </span> 
+Se puede descargar directamente en la tienda de Ubuntu. Esta aplicación nos permites administrar los Plugins qué instalaremos. 
+
+
+<p align="center">
+    <img src="https://i.ibb.co/PWFD82g/Manage-Extension.png" alt="Manage Extension]">
+    </a>
+</p>
+
+
+<br>
+
+## <span style="color:#3E6D9C;">**2. Pluggins**</span> 
+En la sección de Buscar, descargaremos los siguientes Plugins: 
+
+<br>
+  - Arc Menu: coloca un menú al estilo de Arch Linux en la parte superior. 
+  <br>
+  - Blur my schell: la barra superior y la sección de actividades con un efecto transparente. El efecto blur qué se ve en la imagen principal, es gracias a este efecto y al wallpaper qué tiene colores en la parte alta. <a style="color:#3E6D9C;" target="_blank" href="https://github.com/midnitefox/Nord-Theme-Ports-and-Assets/blob/main/Wallpapers/nord-swatch-bar-top.png">Wallpaper</a>
+  <br>
+  - Friperry Aplication Menu: ménu minimalista en la parte superior. 
+  <br>
+  - Fiperry move clock: mueve el reloj a la parte derecha de la barra superior. 
+  <br>
+  - Remove app menu: elimina el simbolo del programa que tengamos abierto en el momento 
+
+  <br>
+  - User theme: nos permitirá usar diferentes temas. Es muy importante tenerla activada. 
+
+<br>
+<br>
+
+## <span style="color:#3E6D9C;">**3. Tweaks** </span> 
+
+Tweaks es una aplicación qué nos permites personalizar a mayor medida nuestro Ubuntu, pudiendo cambiar los temas, iconos, fuentes, ventanas y más. Para ello, abrimos nuestro terminal y ejecutamos los siguientes comandos. 
+
+<br>
+
+```sh
+  sudo apt-add repository universe
+  sudo apt-get install gnome-tweaks
+  sudo apt update
+```
+
+<br>
+
+
+## <span style="color:#3E6D9C;">**4. Temas** </span>
+
+Primero, crearemos en el directorio Home, una carpeta llamada **.themes**. Y en la carpeta de *local/share*, crearemos una carpeta llamada **.icons**.
+
+<br>
+
+Para descargar los temas, nos dirigimos a la siguiente página <a style="color:#63d3ff;" target="_blank" href="https://www.gnome-look.org/browse?cat=134"><u>Gnome Shell Theme</u></a>.
+
+<br>
+
+<p align="center">
+    <img src="https://i.ibb.co/P9dbdbV/gnomeshelltheme.png" alt="Themes" width="1024">
+    </a>
+</p>
+
+<br>
+
+Personalmente, a mi me gustan estos temas: 
+
+  <br>
+  - Nordic-darket: este es el tema que utilizo.
+  <br>
+  - Orchis-dark
+  <br>
+  - WhiteSur-dark
+  
+<br>
+<br>
+
+Una vez descargados los temas, lo descomprimimos y lo movemos a la carpeta qué creamos llamada **.themes**. De igual forma será para los iconos. 
+A mí me gustan estos iconos: 
+
+<br>
+
+### <span style="color:#3E6D9C;">**4.1 Iconos**</span>
+  <br>
+  - Colloid & light
+  <br>
+  - hicolor
+  <br>
+  - Tela
+
+<br>
+<br>
+
+Lo siguiente hacer, es abrir la aplicación Tweaks y en apartado de *Apariencia* cambiamos el apartado de themes, icons & shell por nuestro tema qué más nos guste. Aquí mismo, podemos cambiar el wallpaper. Les dejo unos repositorios de wallpaper del tema Nord en GitHub.
+
+<a style="color:#63d3ff;" target="_blank" href="https://github.com/linuxdotexe/nordic-wallpapers/blob/master/wallpaper-preview.md"><u>Wallpapers 1</u></a> &
+<a style="color:#63d3ff;" target="_blank" href="https://github.com/midnitefox/Nord-Theme-Ports-and-Assets"><u>Wallpapers 2</u></a>
+
+<p align="center">
+    <img src="https://i.ibb.co/jws4tqF/configs.png" alt="configs" width="750">
+    </a>
+</p>
+
+<br>
+
+Si queremos qué los iconos de cerrar, minimizar y redimensionar de las ventanas estén en el lado izquierdo, en la sección de windows titlebar, colocamos la opción de izquierda. Y para cambiar la sección del dock, nos dirigimos a la configuración de Ubuntu, en paraciencia, colocamos qué el dock este abajo. Si queremos qué se oculte automáticamente, activamos esta opción. 
+
+<p align="center">
+    <img src="https://i.ibb.co/SVWkTKB/bar.png" alt="bottom bar" width="750">
+    </a>
+</p>
