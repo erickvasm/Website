@@ -47,10 +47,6 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(to top, var(--color-background), transparent);
 }
 
-header{
-  margin-bottom: 4rem;
-}
-
 .portfolio__card, 
 .skill_card, 
 .contact__card {
@@ -102,10 +98,6 @@ header{
   list-style: none;
 }
 
-.main__article{
-  margin-top: 150px;
-}
-
 .articles{
   height: 52vh;
 }
@@ -129,11 +121,6 @@ nav ul li a:hover,
 nav ul li a.active {
   background-color: #4053ff;
   color: white;
-}
-
-.main__blospost, 
-.articles__post li a{
-  color: #e7e4e3;
 }
 
 .articles__post {

@@ -1,5 +1,6 @@
 ---
 import Head from "~/components/head.astro"
+import HeaderBlog from "~/components/header-blog.astro";
 import Buttom from "~/components/buttom.astro";
 import ContentSection from "~/components/content-section.astro";
 import "~/styles/index.css";
@@ -23,18 +24,19 @@ const {
   <Head title="Blog Erick Vasquez" description=""/>
  
   <body
-    class="bg-black h-full overflow-x-hidden text-base selection:bg-secondary m-12"
+    class="bg-default h-full overflow-x-hidden text-base text-default selection:bg-secondary" 
   >
-    <main class="mt-5 main__blospost">
-      <ContentSection title={title} id="articles">
+  <HeaderBlog />
+    <main class="px-20 space-y-24 mb-10">
+      <ContentSection title={title} id="articles">      
         <article>
-          <div class="mb-12">
+          <figure class="mb-12 flex justify-center">
             {
               heroImage && (
-                <img width={1400} height={360} src={heroImage} alt="" />
+                <img width={750} height={360} src={heroImage} alt="" />
               )
             }
-          </div>
+          </figure>
 
           {pubDate && <time>{pubDate}</time>}
           {
@@ -43,9 +45,7 @@ const {
                 Last updated on <time>{updatedDate}</time>
               </div>
             )
-          }
-          <br />
-          <br />
+          }    
           <hr />
           <slot />
         </article>
