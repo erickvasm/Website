@@ -1,6 +1,7 @@
 ---
 import ContentSection from "~/components/content-section.astro";
 
+
 const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
@@ -11,8 +12,17 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
     <section class="articles">
         <ul class="articles__post">
             {posts.map((post) => (
-                <li>
-                    <time datetime={post.frontmatter.pubDate} class="mr-12">
+                <li class="flex items-center justify-center">           
+                   
+                   <img
+                        class="border rounded-xl mr-4"
+                        src={post.frontmatter.heroImage}
+                        width="15%"
+                        alt=""
+                        
+                    /> 
+                   
+                    <time datetime={post.frontmatter.pubDate} >
                         {new Date(post.frontmatter.pubDate).toLocaleDateString('en-gb', {
                             year: 'numeric',
                             month: 'short',
