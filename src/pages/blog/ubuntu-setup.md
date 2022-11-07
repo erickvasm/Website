@@ -20,7 +20,7 @@ Se puede descargar directamente en la tienda de Ubuntu. Esta aplicación nos per
 
 
 <p align="center">
-    <img src="https://i.ibb.co/PWFD82g/Manage-Extension.png" alt="Manage Extension]">
+    <img src="https://i.ibb.co/PWFD82g/Manage-Extension.png" alt="Manage Extension">
     </a>
 </p>
 
@@ -73,7 +73,7 @@ Para descargar los temas, nos dirigimos a la siguiente página <a style="color:#
 <br>
 
 <p align="center">
-    <img src="https://i.ibb.co/P9dbdbV/gnomeshelltheme.png" alt="Themes" width="1024">
+    <img src="https://i.ibb.co/P9dbdbV/gnomeshelltheme.png" alt="Themes" style="border-radius: 15px;" width="1024">
     </a>
 </p>
 
@@ -113,7 +113,7 @@ Lo siguiente hacer, es abrir la aplicación Tweaks y en apartado de *Apariencia*
 <a style="color:#63d3ff;" target="_blank" href="https://github.com/midnitefox/Nord-Theme-Ports-and-Assets"><u>Wallpapers 2</u></a>
 
 <p align="center">
-    <img src="https://i.ibb.co/jws4tqF/configs.png" alt="configs" width="750">
+    <img src="https://i.ibb.co/jws4tqF/configs.png" alt="configs" style="border-radius: 15px;" width="750">
     </a>
 </p>
 
@@ -122,6 +122,6 @@ Lo siguiente hacer, es abrir la aplicación Tweaks y en apartado de *Apariencia*
 Si queremos qué los iconos de cerrar, minimizar y redimensionar de las ventanas estén en el lado izquierdo, en la sección de windows titlebar, colocamos la opción de izquierda. Y para cambiar la sección del dock, nos dirigimos a la configuración de Ubuntu, en paraciencia, colocamos qué el dock este abajo. Si queremos qué se oculte automáticamente, activamos esta opción. 
 
 <p align="center">
-    <img src="https://i.ibb.co/SVWkTKB/bar.png" alt="bottom bar" width="750">
+    <img src="https://i.ibb.co/SVWkTKB/bar.png" alt="bottom bar" style="border-radius: 15px;" width="750">
     </a>
 </p>
