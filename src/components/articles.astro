@@ -16,7 +16,7 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
                 <li class="text-center mb-4">           
                    <a href={post.url}>
                         <img
-                            class="border rounded-xl"
+                            class="border border-transparent rounded-xl"
                             src={post.frontmatter.heroImage as string}
                             width="250"
                         
