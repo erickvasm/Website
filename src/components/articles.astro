@@ -1,5 +1,6 @@
 ---
 import ContentSection from "~/components/content-section.astro";
+import { Image } from '@astrojs/image/components'
 
 
 const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
@@ -10,26 +11,32 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
 
 <ContentSection title="ARTICLES" id="articles">
     <section class="articles">
-        <ul class="articles__post">
+        <ul class="articles__post grid ">
             {posts.map((post) => (
-                <li class="flex items-center justify-center">           
-                   
-                   <img
-                        class="border rounded-xl mr-4"
-                        src={post.frontmatter.heroImage}
-                        width="15%"
-                        alt=""
+                <li class="text-center mb-4">           
+                   <a href={post.url}>
+                        <img
+                            class="border rounded-xl"
+                            src={post.frontmatter.heroImage as string}
+                            width="250"
                         
-                    /> 
+                            alt=""
+                        
+                        /> 
                    
-                    <time datetime={post.frontmatter.pubDate} >
-                        {new Date(post.frontmatter.pubDate).toLocaleDateString('en-gb', {
-                            year: 'numeric',
-                            month: 'short',
-                            day: 'numeric',
-                        })}
-                    </time>
-                    <a href={post.url}>{post.frontmatter.title}</a>
+                        <time datetime={post.frontmatter.pubDate} >
+                            {new Date(post.frontmatter.pubDate).toLocaleDateString('en-gb', {
+                                year: 'numeric',
+                                month: 'short',
+                                day: 'numeric',
+                            })}
+                        </time>
+                        <div class="text-l font-bold">
+                            {post.frontmatter.title}
+                        </div>
+                        <div>{post.frontmatter.description}</div>
+                    </a>
+                    
                 </li>
             ))}
         </ul>
