@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Ubuntu Setup"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "6/11/22"
+pubDate: "6 Noviembre 2022"
 heroImage: "https://i.ibb.co/LzXW7Q4/Ubuntu-Nord.png"
 ---
 <br>

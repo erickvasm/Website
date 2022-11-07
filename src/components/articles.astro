@@ -13,7 +13,7 @@ const posts = (await Astro.glob('../pages/blog/*.{md,mdx}')).sort(
             {posts.map((post) => (
                 <li>
                     <time datetime={post.frontmatter.pubDate} class="mr-12">
-                        {new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
+                        {new Date(post.frontmatter.pubDate).toLocaleDateString('en-gb', {
                             year: 'numeric',
                             month: 'short',
                             day: 'numeric',
