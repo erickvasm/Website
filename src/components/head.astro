@@ -4,8 +4,8 @@ export interface Props {
 	description: string;
 }
 
-const { site } = Astro;
-const image = new URL("https://i.ibb.co/WF4wt7n/erickvasm.png", site);
+const url = Astro.url;
+const image = new URL("https://i.ibb.co/WF4wt7n/erickvasm.png", url);
 
 const { title, description } = Astro.props;
 ---
@@ -16,7 +16,18 @@ const { title, description } = Astro.props;
     <link rel="icon" href="/favicon.svg" sizes="any"/>
 
     <title>{title}</title>
+    <meta property="og:title" content="erickvasm" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={url} />
     <meta name="description" content={description} />
+    <meta name="author" content="Erick Vasquez" />
+    <meta name="copyright" content="ISC" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@erickvasm" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="canonical" content={url} />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -27,12 +38,6 @@ const { title, description } = Astro.props;
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
     />
-    
-    <meta property="og:title" content="Erick Vasquez" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="og:url" content={site} />
 
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");

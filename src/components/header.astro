@@ -3,28 +3,28 @@ import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 
 const navItems = [
-  { title: "About", url: "#about" },  
-  { title: "Portfolio", url: "#portfolio" },
-  { title: "Blog", url: "/blog" },
-  { title: "Contact", url: "#contact" },
+  { title: "About", url: "#about", target:""},  
+  { title: "Portfolio", url: "#portfolio", target:"" },
+  { title: "Blog", url: "https://medium.com/@erickvasm", target:"_blank" },
+  { title: "Contact", url: "#contact", target:"" },
 ];
 ---
 
 <header
-  id="page-header"
+  id="page__header"
   class="absolute bottom-0 z-10 flex items-center justify-between w-full px-8 py-4 border-b border-transparent mb-12"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1>Erick Vasquez</h1>
+    <h1>erickvasm</h1>
   </a>
   <div>
     <div class="flex items-center gap-6">
       <nav class="hidden sm:block">
         <ul class="flex items-center gap-6">
           {
-            navItems.map(({ title, url }) => (
+            navItems.map(({ title, url, target }) => (
               <li>
-                <a class="text-sm" href={url}>
+                <a class="text-sm" href={url} target={target}>
                   {title}
                 </a>
               </li>
@@ -55,8 +55,8 @@ const navItems = [
               <Icon pack="mdi" name="close" class="h-8" />
             </button>
           </header>
-          <div class="flex justify-center">
-            <h1 class="text-8xl gradient-text">Erick Vasquez</h1>
+          <div class="flex justify-center p-2">
+            <h1 class="text-8xl gradient-text">erickvasm</h1>
           </div>
           <nav>
             <ul class="flex flex-col">
@@ -82,7 +82,7 @@ const navItems = [
 
   const menuModalId = "menu-modal";
 
-  const header: HTMLElement = document.querySelector("#page-header");
+  const header: HTMLElement = document.querySelector("#page__header");
   const page = document.documentElement;
   const menu = document.querySelector(`#${menuModalId} ul`);
   const openNavButton = document.querySelector("#open-nav-button");

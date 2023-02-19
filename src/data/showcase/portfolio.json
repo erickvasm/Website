@@ -12,21 +12,9 @@
     "url": "https://documenter.getpostman.com/view/23461662/2s847HNXb2"
   },
   {
-    "title": "Chat-bot",
-    "image": "src/data/showcase/images/chat-bot.png",
-    "technologies": "Dialogflow",
-    "url": "https://www.municarrillo.go.cr/"
-  },
-  {
     "title": "Naviera Pep",
     "image": "src/data/showcase/images/navierapep.png",
     "technologies": "PHP & Laravel",
     "url": "https://github.com/erickvasm/Naviera-PeP"
-  },
-  {
-    "title": "Hestor Hotelero",
-    "image": "src/data/showcase/images/gestorhotelero.png",
-    "technologies": "C# & .NET",
-    "url": "https://git.ucr.ac.cr/CRIS.TAISIGUE/gestorhotelero"
   }
 ]
