@@ -61,9 +61,9 @@ const navItems = [
           <nav>
             <ul class="flex flex-col">
               {
-                navItems.map(({ title, url }) => (
+                navItems.map(({ title, url, target }) => (
                   <li>
-                    <a class="block py-4 text-xl text-center" href={url}>
+                    <a class="block py-4 text-xl text-center" href={url} target={target}>
                       {title}
                     </a>
                   </li>
