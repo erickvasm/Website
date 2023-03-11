@@ -7,12 +7,22 @@ import Header from "~/components/header.astro";
 import About from "~/components/about.astro";
 import Portfolio from "~/components/portfolio.astro";
 import Splash from "~/components/splash.astro";
+import Translade from "~/components/translate-buttom.astro";
 import "~/styles/index.css";
 ---
 
 <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <Head title="erickvasm's Portfolio" 
   description="Welcome to my digital portfolio! My name is Erick Vasquez, and I'm a I love software development! Here you will find a sample of my skills and experience in frontend and backend."/>
+
+<!-- 
+  _   _          _   _             _____   _                            _                                                                            _                                                              _          ___   
+ | | | |   ___  | | | |   ___     |_   _| | |__     ___   _ __    ___  | |  
+ | |_| |  / _ \ | | | |  / _ \      | |   | '_ \   / _ \ | '__|  / _ \ | |    
+ |  _  | |  __/ | | | | | (_) |     | |   | | | | |  __/ | |    |  __/ |_|     
+ |_| |_|  \___| |_| |_|  \___/      |_|   |_| |_|  \___| |_|     \___| (_)    
+ 
+-->
 
   <body
     class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
@@ -21,6 +31,7 @@ import "~/styles/index.css";
     <Splash />
     <div class="px-8 py-32 space-y-24">
       <About />
+      <Translade />
       <Skills />
       <Portfolio />
       <Contact />
