@@ -3,7 +3,7 @@ import ContentSection from "~/components/content-section.astro";
 import SkillsList from "~/components/skills-list.astro";
 
 const frameworks = [
-{
+  {
     title: "Spring Boot",
     icon: "frameworks/spring",
     url: "https://spring.io/guides/gs/spring-boot/",
@@ -22,36 +22,36 @@ const frameworks = [
     title: "Tailwind",
     icon: "frameworks/tailwind",
     url: "https://tailwindcss.com/",
-  }, 
+  },
 ];
 
 const others = [
   {
     title: "Linux",
-    icon: "fa-brands:linux",
+    icon: "mdi:file-alert",
     url: "https://ubuntu.com/",
   },
   {
     title: "Git",
-    icon: "fa-brands:git",
+    icon: "mdi:file-alert",
     url: "https://git-scm.com/",
   },
   {
     title: "Docker",
-    icon: "fa-brands:docker",
+    icon: "mdi:file-alert",
     url: "https://www.docker.com/ ",
-  }
+  },
 ];
 
 const technologies = [
   {
     title: "HTML",
-    icon: "fa-brands:html5",
+    icon: "mdi:file-alert",
     url: "https://html.com/html5/",
   },
   {
     title: "CSS",
-    icon: "fa-brands:css3",
+    icon: "mdi:file-alert",
     url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
@@ -61,8 +61,8 @@ const technologies = [
   },
   {
     title: "Java",
-    icon: "fa-brands:java",
-    url: "https://www.java.com/"
+    icon: "mdi:file-alert",
+    url: "https://www.java.com/",
   },
   {
     title: "SQL",
@@ -73,20 +73,11 @@ const technologies = [
 ---
 
 <ContentSection title="SKILLS" id="skills">
- <Fragment slot="lead">
+  <Fragment slot="lead">
     There is my <span class="text-primary">mains</span> skills.
   </Fragment>
-  <SkillsList
-    title="Technologies"
-    data={technologies}
-  />
+  <SkillsList title="Technologies" data={technologies} />
 
-  <SkillsList
-    title="Frameworks"
-    data={frameworks}
-  />
-  <SkillsList
-    title="Others"
-    data={others}
-  />
+  <SkillsList title="Frameworks" data={frameworks} />
+  <SkillsList title="Others" data={others} />
 </ContentSection>

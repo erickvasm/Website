@@ -1,19 +1,19 @@
 ---
 import ContentSection from "~/components/content-section.astro";
-import { Icon } from "astro-icon";
+import {Icon} from "astro-icon/components";
 
 const links = [
   {
     url: "https://github.com/erickvasm",
     description: "GitHub",
     name: "GitHub",
-    icon: "fa-brands:github-alt",
+    icon: "mdi:file-alert",
   },
   {
     url: "https://www.linkedin.com/in/erickvasquezmurillo/",
     description: "LinkedIn",
     name: "LinkedIn",
-    icon: "fa-brands:linkedin",
+    icon: "mdi:file-alert",
   },
   {
     url: "mailto:contact@erickvasm.com",
@@ -44,7 +44,7 @@ const links = [
                 target="_blank"
               >
                 <span class="sr-only">{link.description}</span>
-                <Icon class="h-full" name={link.icon} />
+                <Icon class="size-full" name={link.icon} />
               </a>
               <a href={link.url} target="_blank">{link.name}</a>
             </li>
