@@ -79,17 +79,10 @@ body{
   padding: 15px;
 }
 
-.contact__card--img {
-  border-radius: 70px;
-  width: 120px;
-  height: 120px;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-}
-
 .contact__card img {
   border-radius: 70px;
-  width: 120px;
-  height: 120px;
+  width: 145px;
+  height: 145px;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 }
 
