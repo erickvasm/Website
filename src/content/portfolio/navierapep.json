@@ -1,6 +1,6 @@
 {
   "title": "Naviera Pep",
-  "image": "src/content/portfolio/images/navierapep.png",
+  "image": "https://i.ibb.co/0F0qxFC/navierapep.png",
   "url": "https://github.com/erickvasm/Naviera-PeP",
   "technologies": "PHP & Laravel",
   "featured": 2
