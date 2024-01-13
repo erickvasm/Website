@@ -1,12 +1,12 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 
 const navItems = [
-  { title: "About", url: "#about", target:""},  
-  { title: "Portfolio", url: "#portfolio", target:"" },
-  { title: "Blog", url: "https://medium.com/@erickvasm", target:"_blank" },
-  { title: "Contact", url: "#contact", target:"" },
+  { title: "About", url: "#about", target: "" },
+  { title: "Portfolio", url: "#portfolio", target: "" },
+  { title: "Blog", url: "https://medium.com/@erickvasm", target: "_blank" },
+  { title: "Contact", url: "#contact", target: "" },
 ];
 ---
 
@@ -14,7 +14,7 @@ const navItems = [
   id="page__header"
   class="absolute bottom-0 z-10 flex items-center justify-between w-full px-8 py-4 border-b border-transparent mb-12"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
+  <a class="flex items-center gap-3 hover:!text-default" href="/">
     <h1>erickvasm</h1>
   </a>
   <div>
@@ -38,7 +38,7 @@ const navItems = [
         class="btn sm:hidden"
         aria-label="Navigation"
       >
-        <Icon pack="mdi" name="menu" class="h-8" />
+        <Icon name="mdi:menu" class="size-8" />
       </button>
       <ThemeSwitcher />
     </div>
@@ -52,7 +52,7 @@ const navItems = [
               class="btn"
               aria-label="Close navigation"
             >
-              <Icon pack="mdi" name="close" class="h-8" />
+              <Icon name="mdi:close" class="size-8" />
             </button>
           </header>
           <div class="flex justify-center p-2">
@@ -63,7 +63,11 @@ const navItems = [
               {
                 navItems.map(({ title, url, target }) => (
                   <li>
-                    <a class="block py-4 text-xl text-center" href={url} target={target}>
+                    <a
+                      class="block py-4 text-xl text-center"
+                      href={url}
+                      target={target}
+                    >
                       {title}
                     </a>
                   </li>

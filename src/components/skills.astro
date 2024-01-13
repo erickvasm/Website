@@ -4,9 +4,9 @@ import SkillsList from "~/components/skills-list.astro";
 
 const frameworks = [
   {
-    title: "Laravel",
-    icon: "fa-brands:laravel",
-    url: "https://laravel.com/",
+    title: "Spring Boot",
+    icon: "frameworks/spring",
+    url: "https://spring.io/guides/gs/spring-boot/",
   },
   {
     title: ".Net Core",
@@ -15,54 +15,44 @@ const frameworks = [
   },
   {
     title: "Vue.js",
-    icon: "frameworks/vue",
+    icon: "mdi:vuejs",
     url: "https://vuejs.org/",
   },
   {
     title: "Tailwind",
-    icon: "frameworks/tailwind",
+    icon: "mdi:tailwind",
     url: "https://tailwindcss.com/",
-  }, 
-  {
-    title: "Bootstrap",
-    icon: "fa-brands:bootstrap",
-    url: "https://getbootstrap.com/",
-  }
+  },
 ];
 
 const others = [
   {
     title: "Linux",
-    icon: "fa-brands:linux",
+    icon: "mdi:linux",
     url: "https://ubuntu.com/",
   },
   {
     title: "Git",
-    icon: "fa-brands:git",
+    icon: "mdi:git",
     url: "https://git-scm.com/",
   },
   {
     title: "Docker",
-    icon: "fa-brands:docker",
+    icon: "mdi:docker",
     url: "https://www.docker.com/ ",
-  }
+  },
 ];
 
 const technologies = [
   {
     title: "HTML",
-    icon: "fa-brands:html5",
+    icon: "mdi:language-html5",
     url: "https://html.com/html5/",
   },
   {
     title: "CSS",
-    icon: "fa-brands:css3",
+    icon: "mdi:language-css3",
     url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  },
-  {
-    title: "PHP",
-    icon: "fa-brands:php",
-    url: "https://www.php.net/",
   },
   {
     title: "C#",
@@ -71,8 +61,8 @@ const technologies = [
   },
   {
     title: "Java",
-    icon: "fa-brands:java",
-    url: "https://www.java.com/"
+    icon: "mdi:language-java",
+    url: "https://www.java.com/",
   },
   {
     title: "SQL",
@@ -83,20 +73,10 @@ const technologies = [
 ---
 
 <ContentSection title="SKILLS" id="skills">
- <Fragment slot="lead">
-    There is my <span class="text-primary">mains</span> skills.
+  <Fragment slot="lead">
+    There is my <span class="text-primary">mains</span> skills
   </Fragment>
-  <SkillsList
-    title="Technologies"
-    data={technologies}
-  />
-
-  <SkillsList
-    title="Frameworks"
-    data={frameworks}
-  />
-  <SkillsList
-    title="Others"
-    data={others}
-  />
+  <SkillsList title="Technologies" data={technologies} />
+  <SkillsList title="Frameworks" data={frameworks} />
+  <SkillsList title="Others" data={others} />
 </ContentSection>

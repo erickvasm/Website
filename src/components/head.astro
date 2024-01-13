@@ -1,7 +1,7 @@
 ---
 export interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const url = "https://www.erickvasm.com";
@@ -11,54 +11,52 @@ const { title, description } = Astro.props;
 ---
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.svg" sizes="any"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/favicon.svg" sizes="any" />
+  <title>{title}</title>
+  <meta property="og:title" content="erickvasm" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={image} />
+  <meta property="og:url" content={url} />
+  <meta name="description" content={description} />
+  <meta name="author" content="Erick Vasquez" />
+  <meta name="copyright" content="ISC" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@erickvasm" />
+  <meta
+    name="robots"
+    content="index, follow, max-snippet:-1, max-image-preview:large"
+  />
+  <meta name="canonical" content={url} />
 
-    <title>{title}</title>
-    <meta property="og:title" content="erickvasm" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
-    <meta property="og:url" content={url} />
-    <meta name="description" content={description} />
-    <meta name="author" content="Erick Vasquez" />
-    <meta name="copyright" content="ISC" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@erickvasm" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
-    <meta name="canonical" content={url} />
+  <link rel="preconnect" rel="preload" href="https://fonts.gstatic.com" />
+  <link
+    rel="stylesheet"
+    rel="preload"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap"
+  />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap"
-    />
-      <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
-    />
+  <script is:inline>
+    const themeSaved = localStorage.getItem("theme");
 
-    <script is:inline>
-      const themeSaved = localStorage.getItem("theme");
-
-      if (themeSaved) {
-        document.documentElement.dataset.theme = themeSaved;
-      } else {
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
-      }
-
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (event) => {
-          if (!localStorage.getItem("theme")) {
-            document.documentElement.dataset.theme = event.matches
-              ? "dark"
-              : "light";
-          }
-        });
-    </script>
-  </head>
+    if (themeSaved) {
+      document.documentElement.dataset.theme = themeSaved;
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+    }
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (event) => {
+        if (!localStorage.getItem("theme")) {
+          document.documentElement.dataset.theme = event.matches
+            ? "dark"
+            : "light";
+        }
+      });
+  </script>
+</head>
