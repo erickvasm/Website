@@ -2,6 +2,6 @@
   "title": "Zona de Descargas",
   "image": "src/content/portfolio/images/zonadescargas.png",
   "url": "http://zonadescargas.municarrillo.go.cr/",
-  "technologies": "Vue.js, Typescript, Bootstrap",
+  "technologies": "Vue.js & Typescript",
   "featured": 3
 }

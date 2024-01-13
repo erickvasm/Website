@@ -16,11 +16,9 @@ const orderedSites = featuredSites.sort(
   <Fragment slot="lead">
     These are some of my <span class="text-primary">projects</span>.{" "}
   </Fragment>
-  <div class="max-w-6xl space-y-2 portfolio__main">
-    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <div class="portfolio__main--container">
-        {orderedSites.map((site) => <PortfolioCard site={site} />)}
-      </div>
+  <div class="max-w-6xl space-y-2">
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-3 md:col-start-2">
+      {orderedSites.map((site) => <PortfolioCard site={site} />)}
     </div>
   </div>
 </ContentSection>
