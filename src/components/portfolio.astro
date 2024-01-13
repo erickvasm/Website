@@ -1,21 +1,26 @@
 ---
+import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import PortfolioCard from "~/components/portfolio-card.astro";
-import portfolio from "~/data/showcase/portfolio.json";
+
+const featuredSites = await getCollection(
+  "portfolio",
+  ({ data }) => "featured" in data
+);
+const orderedSites = featuredSites.sort(
+  (a, b) => a.data.featured! - b.data.featured!
+);
 ---
 
 <ContentSection title="PORTFOLIO" id="portfolio">
   <Fragment slot="lead">
     These are some of my <span class="text-primary">projects</span>.{" "}
-    
   </Fragment>
   <div class="max-w-6xl space-y-2 portfolio__main">
-    <div class="portfolio__main--container">
-      {
-        portfolio.map(({ title, image, technologies, url }) => (
-          <PortfolioCard title={title} image={image} technologies={technologies} url={url}/>
-        ))
-      }
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div class="portfolio__main--container">
+        {orderedSites.map((site) => <PortfolioCard site={site} />)}
+      </div>
     </div>
   </div>
 </ContentSection>
