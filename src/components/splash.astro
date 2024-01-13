@@ -42,20 +42,16 @@ import Buttom from "~/components/buttom.astro";
       transform: translate3d(0, 30px, 0);
     }
   }
-
   picture {
     animation: float linear 2.5s infinite alternate;
   }
-
   @media (prefers-reduced-motion: reduce) {
     picture {
       @apply animate-none;
     }
-
     :global(#starfield) {
       @apply hidden;
     }
-
     #splash-bg-fallback {
       @apply block;
     }
