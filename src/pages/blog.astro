@@ -1,0 +1,25 @@
+---
+import ContentSection from "../components/content-section.astro";
+import { getArticles } from "../api/devto/getArticles";
+import Article from "../components/article-card.astro";
+import "~/styles/index.css";
+
+const articles = await getArticles({ pages: 3, perPage: 5 });
+---
+<meta charset="UTF-8">
+<ContentSection title="BLOG" id="blog">
+  <Fragment slot="lead">
+    My last blogs
+  </Fragment>
+  <section class="articles-list">
+    {articles.map(article => (
+      <Article
+        title={article.title}
+        description={article.description}
+        image={article.cover_image || "https://via.placeholder.com/150"}
+        publishedAt={article.published_at}
+        url={article.url}
+      />
+    ))}
+  </section>
+</ContentSection>

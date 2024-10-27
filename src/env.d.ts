@@ -1,2 +1,6 @@
 /// <reference path="../.astro/types.d.ts" />
-/// <reference types="astro/client" />
+declare namespace NodeJS {
+  interface ProcessEnv {
+    DEV_API_KEY: string;
+  }
+}
