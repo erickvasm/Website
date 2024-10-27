@@ -1,4 +1,6 @@
 ---
+const { splashTitle } = Astro.props;
+
 import Buttom from "~/components/buttom.astro";
 ---
 
@@ -17,7 +19,7 @@ import Buttom from "~/components/buttom.astro";
       <div
         class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
       >
-        Hi There!
+        {splashTitle}
       </div>
       <Buttom ref="#about" title="Explore" icon="mdi:rocket-launch" />
     </h2>
@@ -26,34 +28,38 @@ import Buttom from "~/components/buttom.astro";
 
 <noscript>
   <style>
-    #splash-bg-fallback {
-      display: block;
-    }
+      #splash-bg-fallback {
+          display: block;
+      }
   </style>
 </noscript>
 
 <style>
-  @keyframes float {
-    0% {
-      transform: translate3d(0, 0, 0);
+    @keyframes float {
+        0% {
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            transform: translate3d(0, 30px, 0);
+        }
     }
 
-    100% {
-      transform: translate3d(0, 30px, 0);
-    }
-  }
-  picture {
-    animation: float linear 2.5s infinite alternate;
-  }
-  @media (prefers-reduced-motion: reduce) {
     picture {
-      @apply animate-none;
+        animation: float linear 2.5s infinite alternate;
     }
-    :global(#starfield) {
-      @apply hidden;
+
+    @media (prefers-reduced-motion: reduce) {
+        picture {
+            @apply animate-none;
+        }
+
+        :global(#starfield) {
+            @apply hidden;
+        }
+
+        #splash-bg-fallback {
+            @apply block;
+        }
     }
-    #splash-bg-fallback {
-      @apply block;
-    }
-  }
 </style>
