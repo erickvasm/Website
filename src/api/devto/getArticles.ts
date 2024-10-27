@@ -6,7 +6,7 @@ export const getArticles = async (
 ): Promise<DEVArticle[]> => {
   const articles: DEVArticle[] = [];
   const pages = options?.pages ?? 1;
-  const perPage = options?.perPage ?? 10;
+  const perPage = options?.perPage ?? 5;
 
   for (let page = 1; page <= pages; page++) {
     const response = await fetch(

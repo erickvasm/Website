@@ -7,59 +7,56 @@ const formatDate = (dateString: string): string => {
 };
 ---
 
-<div class="article-card">
-  <a href={url} class="article-link"> {}
-    <img src={image} alt={title} class="article-image" />
-    <div class="article-content">
-      <h3 class="article-title">{title}</h3>
-      <p class="article-description">{description}</p>
-      <p class="article-date">Published on {formatDate(publishedAt)}</p>
-    </div>
-  </a>
-</div>
+<section>
+  <div
+    class="flex flex-col items-center gap-4 border border-default bg-offset rounded-lg article__card max-w-xs"> {/* Cambia max-w-sm a max-w-xs para tarjetas más pequeñas */}
+    <a href={url} target="_blank">
+      <img src={image} alt={title} class="article-image" />
+      <Fragment slot="lead">
+        <div class="p-2">
+          <h3 class="article-title">
+            <span>{title}</span>
+          </h3>
+          <p class="article-description">{description}</p>
+          <p class="article-date">Published on {formatDate(publishedAt)}</p>
+        </div>
+      </Fragment>
+    </a>
+  </div>
+</section>
 
 <style>
-    .article-card {
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    .article__card {
+        width: 350px;
+        height: 320px;
         overflow: hidden;
-        margin: 20px 0;
         transition: transform 0.3s;
     }
 
-    .article-card:hover {
+    .article__card:hover {
         transform: translateY(-5px);
+    }
+
+    .article-title {
+        font-size: 1.25rem;
+        margin: 0;
+        color: var(--color-text);
     }
 
     .article-image {
         width: 100%;
-        height: auto;
-    }
-
-    .article-content {
-        padding: 16px;
-    }
-
-    .article-title {
-        font-size: 1.5rem;
-        margin: 0;
-        color: #333;
-    }
-
-    .title-link {
-        text-decoration: none; /* Quita el subrayado */
-        color: inherit; /* Hereda el color del título */
+        height: 50%; /* Ajusta la altura de la imagen a la mitad de la tarjeta */
+        object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
     }
 
     .article-description {
-        font-size: 1rem;
-        color: #666;
+        font-size: 0.9rem;
+        color: var(--color-article);
         margin: 10px 0;
     }
 
     .article-date {
-        font-size: 0.9rem;
-        color: #999;
+        font-size: 0.8rem;
+        color: var(--color-text-offset);
     }
 </style>
