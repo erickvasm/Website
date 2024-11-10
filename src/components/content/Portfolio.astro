@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import ContentSection from "~/components/content-section.astro";
-import PortfolioCard from "~/components/portfolio-card.astro";
+import ContentSection from "./ContentSection.astro";
+import PortfolioCard from "./PortfolioCard.astro";
 
 const featuredSites = await getCollection(
   "portfolio",

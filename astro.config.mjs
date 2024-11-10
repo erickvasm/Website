@@ -9,5 +9,8 @@ export default defineConfig({
     { path: "/", component: "src/pages/index.astro" },
     { path: "/blog", component: "src/pages/blog.astro" },
     { path: "/404", component: "src/pages/no-found.astro" },
-  ]
+  ],
+  build: {
+    minify: true,
+  },
 });

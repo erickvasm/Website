@@ -1,12 +1,12 @@
 ---
-import Head from "~/components/head.astro";
-import Skills from "~/components/skills.astro";
-import Contact from "~/components/contact.astro";
-import Footer from "~/components/footer.astro";
-import Header from "~/components/header.astro";
-import About from "~/components/about.astro";
-import Portfolio from "~/components/portfolio.astro";
-import Splash from "~/components/splash.astro";
+import Head from "~/components/layout/Head.astro";
+import Skills from "~/components/content/Skills.astro";
+import Contact from "~/components/content/Contact.astro";
+import Footer from "~/components/layout/Footer.astro";
+import Header from "~/components/layout/Header.astro";
+import About from "~/components/content/About.astro";
+import Portfolio from "~/components/content/Portfolio.astro";
+import Splash from "~/components/content/Splash.astro";
 import "~/styles/index.css";
 ---
 
@@ -27,7 +27,7 @@ import "~/styles/index.css";
   class="h-full overflow-x-hidden text-base bg-default text-default selection:bg-secondary selection:text-white"
 >
 <Header />
-<Splash splashTitle="Hi There!" />
+<Splash splashTitle="Hi There!" ref="/#about"/>
 <div class="px-8 py-32 space-y-24">
   <About />
   <Skills />

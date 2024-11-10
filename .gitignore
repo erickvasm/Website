@@ -16,6 +16,8 @@ pnpm-debug.log*
 .vscode
 .astro
 
+package-lock.json
+
 # environment variables
 .env
 
