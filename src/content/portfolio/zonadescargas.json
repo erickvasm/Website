@@ -1,6 +1,6 @@
 {
   "title": "Zona Descarga",
-  "description": "test",
+  "description": "Frontend que consume API Municipal",
   "image": "https://i.ibb.co/6Y7ph2P/zonadescargas.png",
   "technologies": "Vue.js & Typescript",
   "url": "http://zonadescargas.municarrillo.go.cr/",

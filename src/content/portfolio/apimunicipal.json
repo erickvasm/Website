@@ -1,6 +1,6 @@
 {
   "title": "API Municipal",
-  "description": "test",
+  "description": "API Municipal que se integra con Alfresco para gestionar documentos digitales.",
   "image": "https://i.ibb.co/6BHSVNs/apimunicipal.png",
   "technologies": "PHP & Laravel",
   "url": "https://documenter.getpostman.com/view/23461662/2s847HNXb2",

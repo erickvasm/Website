@@ -3,8 +3,8 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--color-background-offset);
-  border-radius: 3px;
+    background: var(--color-background-offset);
+    border-radius: 3px;
 }
 
 body {
