@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
-import ContentSection from "~/components/content-section.astro";
-import PortfolioCard from "~/components/portfolio-card.astro";
+import ContentSection from "./ContentSection.astro";
+import PortfolioCard from "./PortfolioCard.astro";
 
 const featuredSites = await getCollection(
   "portfolio",
@@ -18,7 +18,8 @@ const orderedSites = featuredSites.sort(
   </Fragment>
   <div class="max-w-6xl space-y-2">
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-3 md:col-start-2">
-      {orderedSites.map((site) => <PortfolioCard site={site} />)}
+      {orderedSites.map((site) =>
+        <PortfolioCard site={site} />)}
     </div>
   </div>
 </ContentSection>

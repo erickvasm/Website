@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
+  mode: "jit",
   theme: {
     extend: {
       fontFamily: {
@@ -10,6 +11,7 @@ module.exports = {
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
+        article: "var(--color-article)"
       },
       textColor: {
         default: "var(--color-text)",

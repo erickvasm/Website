@@ -1,7 +1,7 @@
 ---
-const { splashTitle } = Astro.props;
+const { splashTitle, ref } = Astro.props;
 
-import Buttom from "./Buttom.astro";
+import Buttom from "~/components/ui/Buttom.astro";
 ---
 
 <section class="relative h-full bg-black header__hero">
@@ -10,6 +10,7 @@ import Buttom from "./Buttom.astro";
       src="https://i.ibb.co/LkRtmzR/stars.png"
       alt="stars"
       class="hero__img"
+      loading="lazy"
     />
   </section>
 
@@ -17,11 +18,11 @@ import Buttom from "./Buttom.astro";
   <div class="relative grid h-full sm:grid-cols-2 place-items-center">
     <h2 class="flex flex-col gap-2 sm:gap-4 sm:self-auto">
       <div
-        class="font-extrabold tracking-tighter text-center text-8xl gradient-text"
+        class="font-extrabold tracking-tighter text-center text-8xl gradient-text p-2"
       >
         {splashTitle}
       </div>
-      <Buttom ref="#about" title="Explore" icon="mdi:rocket-launch" />
+      <Buttom ref={ref} title="Explore" icon="mdi:rocket-launch" />
     </h2>
   </div>
 </section>

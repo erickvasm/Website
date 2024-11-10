@@ -1,7 +1,10 @@
 {
-  "title": "Zona de Descargas",
+  "title": "Zona Descarga",
+  "description": "test",
   "image": "https://i.ibb.co/6Y7ph2P/zonadescargas.png",
-  "url": "http://zonadescargas.municarrillo.go.cr/",
   "technologies": "Vue.js & Typescript",
+  "url": "http://zonadescargas.municarrillo.go.cr/",
+  "github": null,
+  "slug": "descarga",
   "featured": 3
 }

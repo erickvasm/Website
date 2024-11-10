@@ -5,9 +5,12 @@ const portfolio = defineCollection({
   schema: ({ image }) =>
     z.object({
       title: z.string().min(1),
+      description: z.string().min(1),
       image: z.string().refine(image),
-      url: z.string().url(),
       technologies: z.string().min(1),
+      url: z.string().url().nullable(),
+      github: z.string().nullable(),
+      slug: z.string().optional(),
       featured: z.number().min(1).optional(),
     }),
 });

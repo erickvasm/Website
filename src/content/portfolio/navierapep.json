@@ -1,7 +1,10 @@
 {
   "title": "Naviera Pep",
+  "description": "test",
   "image": "https://i.ibb.co/0F0qxFC/navierapep.png",
-  "url": "https://github.com/erickvasm/Naviera-PeP",
   "technologies": "PHP & Laravel",
+  "url": null,
+  "github": "https://github.com/erickvasm/Naviera-PeP",
+  "slug": "naviera",
   "featured": 2
 }
